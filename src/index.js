@@ -9,10 +9,16 @@ import { getGasPrice } from './rpc/getGasPrice.js'
 
 wallet.registerRpcMessageHandler(async (originString, requestObject) => {
     switch (requestObject.method) {
-    case 'hello':
-	const balance = JSON.stringify(await getTerraAccountBalance(wallet, 'Bombay-12 testnet1'));
-	//console.log(price)
-	return wallet.request({
+
+    case 'getHDPath' :
+	await getHDPath(wallet);
+    case 'getTerraPrivateKey' :
+	await getTerraPrivateKey(wallet);
+    case 'getTerraAccount' :
+	await getTerraAccount(wallet);
+    case 'getTerraAccountBalance' :
+	await getTerraAccountBalance(wallet, 'Bombay-12 testnet1');
+	/*return wallet.request({
             method: 'snap_confirm',
             params: [
 		{
@@ -23,7 +29,7 @@ wallet.registerRpcMessageHandler(async (originString, requestObject) => {
 		    balance,
 		},
             ],
-	});
+	    });*/
     default:
 	throw new Error('Method not found.');
     }
