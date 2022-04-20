@@ -5,6 +5,7 @@ import { getTerraAccount } from './getTerraAccount.js'
 /**
  * @fun {JSON} getTerraAccountBalance()
  * @brief Returns the Terra acount balance
+ * @author 1sand0s
  *
  * @return {JSON} Balance of the given wallet
  */

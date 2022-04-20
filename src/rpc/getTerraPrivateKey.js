@@ -3,7 +3,8 @@ import { getPrivateKey } from './getPrivateKey.js'
 /**
  * @fun function getTerraPrivateKey(string)
  * @brief Makes seed suitable for public key generation for Terra network
- * 
+ * @author 1sand0s 
+ *
  * @param {Wallet} Metamask wallet instance
  * @return {Uint8Array} 32byte unsigned int array containing the bytes to generate public key
  */

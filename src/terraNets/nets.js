@@ -1,7 +1,8 @@
 /**
  * @brief Map object to hold the {test/main}net mapping to the public LCD endpoints
  *        (https://docs.terra.money/docs/develop/endpoints.html#private-endpoints)    
- *
+ * @author 1sand0s
+ * 
  * @type{Map()<string, string>}
  */
 const nets = new Map();

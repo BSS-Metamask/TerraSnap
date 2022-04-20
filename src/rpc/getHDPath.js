@@ -1,6 +1,7 @@
 /**
  * @fun {string} getHDPath()
  * @brief Returns the Hierarchical Deterministic (HD) path associated with this Metamask wallet mnemonic
+ * @author 1sand0s
  *
  * @param {Wallet} Metamask wallet instance
  * @return {string} HD path for the specified COIN_TYPE

@@ -1,7 +1,8 @@
 /**
  * @fun {string} getPrivateKey()
  * @brief Returns the private key associated with this Metamask wallet mnemonic
- * 
+ * @author 1sand0s
+ *
  * @param {Wallet} Metamask wallet instance
  * @return {string} Base64-encoded string representation of the key material for this node
  */

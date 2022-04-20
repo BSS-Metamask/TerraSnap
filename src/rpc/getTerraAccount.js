@@ -4,6 +4,7 @@ import { getTerraPrivateKey } from './getTerraPrivateKey.js'
 /**
  * @fun {string} getTerraAccount(wallet)
  * @brief Returns the fully-resolved Menmonic-Key associated with this wallets mnemonic
+ * @author 1sand0s
  *
  * @param {Wallet} Metamask wallet instance
  * @return {RawKey} Terra Account 
