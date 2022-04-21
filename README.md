@@ -1,4 +1,6 @@
 # TerraSnap
+
+[![Build](https://github.com/BSS-Metamask/TerraSnap/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/BSS-Metamask/TerraSnap/actions/workflows/build.yml)
 Wallet for Terra Network based on Metamask Snap
 
 ### Requirements
