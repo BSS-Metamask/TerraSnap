@@ -31,6 +31,10 @@ Wallet for Terra Network based on Metamask Snap
   ```
   yarn install
   ```
+- Install mm-snap to build and serve snap
+  ```
+  npm install -g @metamask/snaps-cli
+  ```
 - Build Project
   ```
   cd src
