@@ -14,11 +14,10 @@ jobs:
           node-version: '14.4.x'
       - name: Install yarn
         run: npm install -g yarn
-      - name: Install Dependencies
+      - name: Install mm-snap
+        run: npm install -g @metamask/snaps-cli
+      - name: Install Dependencies and build snap
         run: |
           cd src
           yarn install
-      - name: Install mm-snap
-        run: npm install -g @metamask/snaps-cli
-      - name: Build Snap
-        run: mm-snap build
+          mm-snap build
