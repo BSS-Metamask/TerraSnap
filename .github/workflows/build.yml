@@ -1,0 +1,33 @@
+name: Build
+
+on: 
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install node
+        run: |
+          wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+	  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+	  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      - name: Update to use v14.4.0
+        run: |
+          nvm install v14.4.0
+	  nvm use v14.4.0
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Install Dependencies
+        run: |
+          cd src
+	  yarn install
+      - name: Install mm-snap
+        run: npm install -g @metamask/snaps-cli
+      - name: Build Snap
+        run: mm-snap build
