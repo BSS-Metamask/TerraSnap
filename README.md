@@ -5,7 +5,8 @@ Wallet for Terra Network based on Metamask Snap
 
 - [nvm](https://github.com/nvm-sh/nvm)
 - [Metamask Flask](https://metamask.io/flask/) Download and add this as an extension to your chrome browser
-- [mm-snap](https://www.npmjs.com/package/@metamask/snaps-cli) Easier to build and run snap with this than `yarn`
+- [yarn](https://yarnpkg.com/) For managing dependencies
+- [mm-snap](https://www.npmjs.com/package/@metamask/snaps-cli) Easier to build and run snap with this than `yarn` (automatically takes care of updating SHA256 hash of snap in `snap.manifest.json`)
 
 ### Building
 
