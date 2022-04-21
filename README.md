@@ -33,6 +33,7 @@ Wallet for Terra Network based on Metamask Snap
   ```
 - Build Project
   ```
+  cd src
   mm-snap build
   ```
 
