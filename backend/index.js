@@ -11,13 +11,13 @@ wallet.registerRpcMessageHandler(async (originString, requestObject) => {
     switch (requestObject.method) {
 
     case 'getHDPath' :
-	await getHDPath(wallet);
+	return await getHDPath(wallet);
     case 'getTerraPrivateKey' :
-	await getTerraPrivateKey(wallet);
+	return await getTerraPrivateKey(wallet);
     case 'getTerraAccount' :
-	await getTerraAccount(wallet);
+	return await getTerraAccount(wallet);
     case 'getTerraAccountBalance' :
-	await getTerraAccountBalance(wallet, 'Bombay-12 testnet1');
+	return await getTerraAccountBalance(wallet, 'Bombay-12 testnet1');
 	case 'hello' :
 		return 'Hello World!';
 	/*return wallet.request({

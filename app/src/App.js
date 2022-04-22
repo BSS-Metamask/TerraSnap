@@ -21,7 +21,7 @@ function App() {
       const response = await window.ethereum.request({
         method: 'wallet_invokeSnap',
         params: [snapId, {
-          method: 'getTerraAccountBalance'
+          method: 'hello'
         }]
       })
       console.log(response);
