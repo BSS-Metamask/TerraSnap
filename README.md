@@ -55,7 +55,7 @@ Wallet for Terra Network based on Metamask Snap
 - Start the snap
   ```
   yarn start:frontend
-  yarn start:backend
+  yarn start:snap
   ```
 
 ### **Using the Dapp**

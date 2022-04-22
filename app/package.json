@@ -17,8 +17,8 @@
   },
   "scripts": {
     "start:frontend": "react-scripts start",
-    "start:backend": "cd ../backend && mm-snap serve --port 9000",
-    "build": "cd ../backend && yarn install && mm-snap build && cd ../app && yarn install && react-scripts build",
+    "start:snap": "cd ../snap && mm-snap serve --port 9000",
+    "build": "cd ../snap && yarn install && mm-snap build && cd ../app && yarn install && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
