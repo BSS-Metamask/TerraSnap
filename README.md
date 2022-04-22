@@ -10,19 +10,19 @@ Wallet for Terra Network based on Metamask Snap
 
 ## Prerequisites
 
-This project requires `node` version `>v14.0.0`
+- This project requires `node` version `>v14.0.0`
+    ```
+    nvm install v14.4.0
+    nvm use v14.0.0
+    ```
+- Install `yarn`
   ```
-  nvm install v14.4.0
-  nvm use v14.0.0
+  npm install -g yarn
   ```
-Install `yarn`
-```
-npm install -g yarn
-```
-Install mm-snap cli
-```
-npm install -g @metamask/snaps-cli
-```
+- Install mm-snap cli
+  ```
+  npm install -g @metamask/snaps-cli
+  ```
 
 ## Building
 
