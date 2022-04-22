@@ -18,6 +18,8 @@ wallet.registerRpcMessageHandler(async (originString, requestObject) => {
 	await getTerraAccount(wallet);
     case 'getTerraAccountBalance' :
 	await getTerraAccountBalance(wallet, 'Bombay-12 testnet1');
+	case 'hello' :
+		return 'Hello World!';
 	/*return wallet.request({
             method: 'snap_confirm',
             params: [

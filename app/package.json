@@ -12,8 +12,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-frontend": "react-scripts start",
+    "start-backend": "cd ../src && mm-snap serve --port 9000",
+    "build": "cd ../src && yarn install && mm-snap build && cd ../app && yarn install && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
