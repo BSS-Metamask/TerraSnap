@@ -1,57 +1,70 @@
 # TerraSnap
 Wallet for Terra Network based on Metamask Snap
 
-### Requirements
+## Requirements
 
+- [Metamask Flask](https://metamask.io/flask/): Download and add this as an extension to your chrome browser
+- [mm-snap](https://www.npmjs.com/package/@metamask/snaps-cli): Easier to build and run snap with this than `yarn`
 - [nvm](https://github.com/nvm-sh/nvm)
-- [Metamask Flask](https://metamask.io/flask/) Download and add this as an extension to your chrome browser
-- [mm-snap](https://www.npmjs.com/package/@metamask/snaps-cli) Easier to build and run snap with this than `yarn`
+- [yarn](https://yarnpkg.com/getting-started)
 
-### Building
+## Prerequisites
+
+This project requires `node` version `>v14.0.0`
+  ```
+  nvm install v14.4.0
+  nvm use v14.0.0
+  ```
+Install `yarn`
+```
+npm install -g yarn
+```
+Install mm-snap cli
+```
+npm install -g @metamask/snaps-cli
+```
+
+## Building
 
 - Clone [this](https://github.com/BSS-Metamask/TerraSnap) repository
   ```
   git clone https://github.com/BSS-Metamask/TerraSnap
   ```
+
 - Switch to branch `Spring2022_UT_BSS`
   ```
   cd TerraSnap
   git checkout Spring2022_UT_BSS
   ```
-- This project requires node version `>v14.0.0`
-  ```
-  nvm install v14.4.0
-  nvm use v14.0.0
-  ```
-- Install `yarn`
-  ```
-  npm install -g yarn
-  ```
+
 - Install Project Dependencies using `yarn`
   ```
   yarn install
   ```
-- Build Project
+
+- Navigate to `app/` and build project
   ```
-  mm-snap build
+  cd app/
+  yarn build
   ```
 
-### Testing
+### **Testing**
 
 - Setup your wallet in Metamask Flask
 
 - Start the snap
   ```
-  mm-snap serve
+  yarn start:frontend
+  yarn start:backend
   ```
 
-- Using the Dapp
+### **Using the Dapp**
   - Open Chrome
-  - Goto URL `localhost:8081`
-  - In the webpage displayed, click on `Connect`
+  - Go to URL `localhost:3000` 
+  - In the webpage displayed, click on `Connect to MetaMask`
   - Click `Connect` in the Metamask popup to accept permission requested by the snap
 
-### Contributing
+## Contributing
 
 - Please follow `javascript` coding style prescribed [here](https://google.github.io/styleguide/jsguide.html)
   
