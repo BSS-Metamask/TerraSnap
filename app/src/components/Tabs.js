@@ -14,7 +14,7 @@ export const Tabs = () =>  {
       <Box sx={{ typography: 'body1' }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} sx={{ color: 'white' }} centered >
+            <TabList onChange={handleChange} sx={{ color: 'white' }} centered>
               <Tab label="Account Details" value="1" />
               <Tab label="Send" value="2" />
               <Tab label="Receive" value="3" />
