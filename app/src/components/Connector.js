@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
-import { Button } from "@material-ui/core";
+import { Button, Typography } from '@mui/material';
+import { Wallet } from './Wallet';
 
-import './Connector.css';
+import '../App.css';
 
 export const Connector = () => {
+    let [connected, setConnected] = useState(false);
     let [title, setTitle] = useState('Terra on MetaMask');
     const snapId = `local:http://localhost:9000/`;
     async function connect () {
       console.log(snapId);
-      await window.ethereum.request({
-        method: 'wallet_enable',
-        params: [{
-          wallet_snap: { [snapId]: {} },
-        }]
-      })
+      try {
+        console.log('Attempting to connect to snap...');
+        await window.ethereum.request({
+          method: 'wallet_enable',
+          params: [{
+            wallet_snap: { [snapId]: {} },
+          }]
+        })
+      } catch (err) {
+        console.error(err)
+        alert('An error occurred: ' + err.message || err)
+      }
+
+      setConnected(true);   
     }
   
     async function send () {
@@ -28,18 +38,29 @@ export const Connector = () => {
         setTitle(response);
       } catch (err) {
         console.error(err)
-        alert('Problem happened: ' + err.message || err)
+        alert('An error occurred: ' + err.message || err)
       }
     }
 
     return (
-      <div className="Connector">
-        <header className="Connector-header">
-          <h1>{title}</h1>
-          <Button variant="contained" onClick={connect}>Connect to MetaMask</Button>
-          <br></br>
-          <Button variant="contained" onClick={send}>Send</Button>
-        </header>
+      <div>
+        {connected ? (
+          <Wallet/>
+        ) : (
+          <div className="App">
+            <header className="App-header">
+              <Typography variant="h1">
+                {title}
+              </Typography>
+            </header>
+            <div className="App-container">
+              <Button variant="outlined" onClick={connect}>Connect to MetaMask</Button>
+              &nbsp;
+              <Button variant="outlined" onClick={send}>Test</Button>
+            </div>
+          </div>
+          )
+        }
       </div>
     );
 }
