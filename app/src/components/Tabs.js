@@ -25,7 +25,7 @@ export default function Tabs() {
             TODO: Display Account Details
           </TabPanel>
           <TabPanel value="2">
-            TODO: Create form with fieldls for recipient, amount, gas price, exchange rate, etc
+            TODO: Create form with fields for recipient, amount, gas price, exchange rate, etc
           </TabPanel>
           <TabPanel value="3">
             TODO: Display QR code with address

@@ -22,12 +22,8 @@
 }
 
 .App-container {
-  display: flex;
-  justify-content: center;
-}
-
-.App-tabs-container {
-  width: 50%;
+  margin: auto;
+  width: 30%;
 }
 
 .App-column {
