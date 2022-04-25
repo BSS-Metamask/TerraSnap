@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Button, Box, Tab } from '@mui/material';
+import { Box, Tab } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
-import SendIcon from '@mui/icons-material/Send';
+import { AddressCard } from './AddressCard';
 
-export default function Tabs() {
+export const Tabs = () =>  {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -28,7 +28,7 @@ export default function Tabs() {
             TODO: Create form with fields for recipient, amount, gas price, exchange rate, etc
           </TabPanel>
           <TabPanel value="3">
-            TODO: Display QR code with address
+            <AddressCard />
           </TabPanel>
           <TabPanel value="4">
             TODO: Show transaction history

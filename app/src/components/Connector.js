@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Typography } from '@mui/material';
 import { Wallet } from './Wallet';
+import { SnapContext } from '../App';
 
 import '../App.css';
 
 export const Connector = () => {
-    let [connected, setConnected] = useState(false);
+    const [connected, setConnected] = useState(false);
+    const [address, setAddress] = useState('');
+
     let [title, setTitle] = useState('Terra on MetaMask');
     const snapId = `local:http://localhost:9000/`;
     async function connect () {
@@ -22,7 +25,9 @@ export const Connector = () => {
         console.error(err)
         alert('An error occurred: ' + err.message || err)
       }
-
+      
+      console.log('Attempting to get address...');
+      await getAddress();
       setConnected(true);   
     }
   
@@ -42,25 +47,37 @@ export const Connector = () => {
       }
     }
 
+    async function getAddress () {
+      let address = await window.ethereum.request({
+          method: 'wallet_invokeSnap',
+          params: [snapId, {
+            method: 'getTerraAccount'
+          }]
+        })
+      setAddress(address);
+    }
+
     return (
-      <div>
-        {connected ? (
-          <Wallet/>
-        ) : (
-          <div className="App">
-            <header className="App-header">
-              <Typography variant="h1">
-                {title}
-              </Typography>
-            </header>
-            <div className="App-container">
-              <Button variant="outlined" onClick={connect}>Connect to MetaMask</Button>
-              &nbsp;
-              <Button variant="outlined" onClick={send}>Test</Button>
+      <SnapContext.Provider value={address}>
+        <div>
+          {connected ? (
+            <Wallet/>
+          ) : (
+            <div className="App">
+              <header className="App-header">
+                <Typography variant="h1">
+                  {title}
+                </Typography>
+              </header>
+              <div className="App-container">
+                <Button variant="outlined" onClick={connect}>Connect to MetaMask</Button>
+                &nbsp;
+                <Button variant="outlined" onClick={send}>Test</Button>
+              </div>
             </div>
-          </div>
-          )
-        }
-      </div>
+            )
+          }
+        </div>
+      </SnapContext.Provider>
     );
 }

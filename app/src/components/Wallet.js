@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { Typography } from '@mui/material';
-import WalletTabs from './Tabs';
+import { Tabs } from './Tabs';
 
 export const Wallet = () => {
   let [title, setTitle] = useState('Terra Wallet');
@@ -13,7 +13,7 @@ export const Wallet = () => {
       </Typography>
       </header>
       <div className="App-container">
-          <WalletTabs/>
+          <Tabs/>
       </div>
     </div>
   );

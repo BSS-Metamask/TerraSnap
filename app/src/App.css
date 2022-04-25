@@ -23,11 +23,6 @@
 
 .App-container {
   margin: auto;
-  width: 30%;
-}
-
-.App-column {
-  flex-direction: column;
 }
 
 .App-link {
