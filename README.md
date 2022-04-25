@@ -21,7 +21,7 @@ Wallet for Terra Network based on Metamask Snap
   ```
 - Install mm-snap cli
   ```
-  npm install -g @metamask/snaps-cli
+  yarn global add @metamask/snaps-cli
   ```
 
 ## Building
@@ -35,11 +35,6 @@ Wallet for Terra Network based on Metamask Snap
   ```
   cd TerraSnap
   git checkout Spring2022_UT_BSS
-  ```
-
-- Install Project Dependencies using `yarn`
-  ```
-  yarn install
   ```
 
 - Navigate to `app/` and build project
