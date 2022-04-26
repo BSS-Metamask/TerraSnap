@@ -1,32 +1,33 @@
 {
-    "name": "terrasnap",
-    "version": "1.0.0",
-    "description": "A wallet for Terra network based on Metamask Snap ",
-    "main": "index.js",
-    "directories": {
-	"test": "test"
-    },
-    "scripts": {
-	"test": "test"
-    },
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/1sand0s/TerraSnap.git"
-    },
-    "keywords": [
-	"Terra",
-	"Snap",
-	"Metamask",
-	"Blockchain",
-	"Wallet"
-    ],
-    "author": "1sand0s",
-    "license": "MIT",
-    "dependencies": {
-	"@terra-money/terra.js": "^2.1.19"
-    },
-    "bugs": {
-	"url": "https://github.com/1sand0s/TerraSnap/issues"
-    },
-    "homepage": "https://github.com/1sand0s/TerraSnap#README"
+   "name": "terrasnap",
+   "version": "1.0.0",
+   "description": "A wallet for Terra network based on Metamask Snap ",
+   "main": "index.js",
+   "directories": {
+      "test": "test"
+   },
+   "scripts": {
+      "test": "test"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/1sand0s/TerraSnap.git"
+   },
+   "keywords": [
+      "Terra",
+      "Snap",
+      "Metamask",
+      "Blockchain",
+      "Wallet"
+   ],
+   "author": "1sand0s",
+   "license": "MIT",
+   "dependencies": {
+      "@babel/runtime": "^7.17.9",
+      "@terra-money/terra.js": "^2.1.19"
+   },
+   "bugs": {
+      "url": "https://github.com/1sand0s/TerraSnap/issues"
+   },
+   "homepage": "https://github.com/1sand0s/TerraSnap#README"
 }

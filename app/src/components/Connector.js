@@ -5,12 +5,14 @@ import { SnapContext } from '../App';
 
 import '../App.css';
 
+export const snapId = `local:http://localhost:9000/`;
+
 export const Connector = () => {
     const [connected, setConnected] = useState(false);
     const [address, setAddress] = useState('');
 
     let [title, setTitle] = useState('Terra on MetaMask');
-    const snapId = `local:http://localhost:9000/`;
+    
     async function connect () {
       console.log(snapId);
       try {
@@ -55,6 +57,7 @@ export const Connector = () => {
           }]
         })
       setAddress(address);
+      console.log(address)
     }
 
     return (

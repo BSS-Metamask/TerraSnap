@@ -17,5 +17,5 @@ export async function getTerraAccount(wallet){
      *     (https://docs.terra.money/docs/develop/sdks/terra-js/keys.html)
      */
     const rawKey = new RawKey(buff);
-    return rawKey;
+    return { ...rawKey, accAddress: rawKey.accAddress };
 }
