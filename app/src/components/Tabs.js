@@ -3,6 +3,8 @@ import { Box, Tab } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { AddressCard } from './AddressCard';
 import { AccountDetailsCard } from './AccountDetailsCard';
+import { SendCard } from './SendCard';
+import { TransactionsCard } from './TransactionsCard';
 
 export const Tabs = () =>  {
   const [value, setValue] = React.useState('1');
@@ -26,13 +28,13 @@ export const Tabs = () =>  {
             <AccountDetailsCard />
           </TabPanel>
           <TabPanel value="2">
-            TODO: Create form with fields for recipient, amount, gas price, exchange rate, etc
+            <SendCard />
           </TabPanel>
           <TabPanel value="3">
             <AddressCard />
           </TabPanel>
           <TabPanel value="4">
-            TODO: Show transaction history
+            <TransactionsCard />
           </TabPanel>
         </TabContext>
       </Box>

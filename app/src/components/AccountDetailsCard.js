@@ -25,7 +25,6 @@ export const AccountDetailsCard = () => {
   }, [])
 
   return (
-
     <Grid container spacing={2}>
       <Grid item xs={12} style={{ display: "flex", overflowWrap: "break-word" }}>
           <strong>Address: </strong> {address.accAddress}
