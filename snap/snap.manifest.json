@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "description": "A wallet for Terra network based on Metamask Snap ",
+  "proposedName": "terrasnap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1sand0s/TerraSnap.git"
+  },
+  "source": {
+    "shasum": "hArZURyJkmukEanxM0n4199N9zrKWXMFTiTiTFh/u80=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "resources/icons/terraLogo.svg",
+        "packageName": "terrasnap",
+        "registry": "https://registry.npmjs.org"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_confirm": {},
+    "snap_getBip44Entropy_330": {},
+    "endowment:network-access": {}
+  },
+  "manifestVersion": "0.1"
+}
